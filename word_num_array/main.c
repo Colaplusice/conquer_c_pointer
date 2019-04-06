@@ -7,7 +7,6 @@
 
 int main(int argc, char const *argv[])
 {
-   
     char buf[WORD_LEN_MAX];
     FILE *fp;
     if (argc == 1)
@@ -20,15 +19,15 @@ int main(int argc, char const *argv[])
         exit(1);
     }
     // init words
-    WordManager *manager= word_initialize();
+    word_initialize();
     // add words
     while (get_word(buf, WORD_LEN_MAX, fp) != EOF)
     {
-        add_word(manager,buf);
+        add_word(buf);
     }
     // out
-    dump_word(manager,stdout);
+    dump_word(stdout);
     // end
-    word_finalize(manager);
+    word_finalize();
     return 0;
 }

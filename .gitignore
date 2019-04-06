@@ -1,0 +1,10 @@
+
+# IDE stuff
+.idea
+.vscode
+
+### macOS template
+.DS_Store
+*.o
+build/
+*.out
